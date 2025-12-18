@@ -1,16 +1,20 @@
 public class HollowRectangle
 {
-    public static void FloydTriangle(int n)
+    public static void ZeroOneTriangle(int n)
     {
-        int m = 1;
-        for(int i=1;i<=n;i++)
+        for(int i =1;i<=n;i++)
         {
-            for(int j=1;j<=i;j++)
+            for(int j=1 ; j<=i ; j++)
             {
-                System.out.print(m);
-                m++;
+                if((i+j)%2==0)
+                {
+                    System.out.print("1");
+                }
+                else{
+                    System.out.print("0");
+                }
             }
-            System.err.println("");
+            System.out.println("");
         }
     }
 
@@ -51,6 +55,7 @@ public class HollowRectangle
     {
         // HollowRect(6, 9);
         // InvertRect(6,9);
-        FloydTriangle(4);
+        // FloydTriangle(4);
+        ZeroOneTriangle(4);
     }
 }
