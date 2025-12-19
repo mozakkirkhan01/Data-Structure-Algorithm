@@ -34,28 +34,68 @@ public class HollowRectangle
         }
     }
 
-    public static void HollowRect(int row, int col)
+    public static void Butterfly(int n)
     {
-        //outerLoop
-        for(int i = 1; i<=row; i++)
+        for(int i = 1; i<=n ; i++)
         {
-            for(int j=1; j<=col; j++)
+            //star
+            for( int j=1 ; j<=i ; j++)
             {
-                if(i==1 || i==row || j==1 || j==col)
-                {
-                    System.out.print("* ");
-                }else{
-                    System.out.print("  ");
-                }
+                System.out.print("*");
             }
-            System.out.println("");
+            // spaces
+
+            for(int k =1; k<= (2*(n-i)) ; k++)
+            {
+                System.out.print(" ");
+            }
+            //star
+            for(int m = 1; m<=i; m++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
         }
+        for( int i = n ;i>=1; i--)
+        {
+            for(int j = 1 ;j<=i ;j++)
+            {
+                System.out.print("*");
+            }
+            for(int k = 1 ; k<=(2*(n-i)); k++)
+            {
+                System.out.print(" ");
+            }
+            for ( int l=1; l<=i; l++)
+            {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+        
     }
+    
+        //outerLoop
+        // for(int i = 1; i<=row; i++)
+        // {
+        //     for(int j=1; j<=col; j++)
+        //     {
+        //         if(i==1 || i==row || j==1 || j==col)
+        //         {
+        //             System.out.print("* ");
+        //         }else{
+        //             System.out.print("  ");
+        //         }
+        //     }
+        //     System.out.println("");
+        // }
+    
     public static void main(String args[])
     {
         // HollowRect(6, 9);
         // InvertRect(6,9);
         // FloydTriangle(4);
-        ZeroOneTriangle(4);
+        // ZeroOneTriangle(4);
+        Butterfly(4);
     }
 }
